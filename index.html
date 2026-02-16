@@ -78,50 +78,50 @@
          transform -translate-x-full transition-transform duration-300 ease-in-out
          xl:static xl:translate-x-0 
          flex flex-col xl:flex-row gap-2 xl:gap-8 xl:justify-center xl:items-center flex-1 z-50 p-6 xl:p-0 text-xs mx-auto">
-          <li class="relative group">
+          <li class="relative group has-child">
             <a href="#"
-              class="flex items-center justify-between gap-2 cursor-pointer dropdown-arrow xl:py-4 py-2 hover:text-brand-gold">
+              class="menu-link flex items-center justify-between gap-2 cursor-pointer xl:py-4 py-2 hover:text-brand-gold">
               <span class="text-nowrap">NFL DFS</span>
             </a>
             <!-- Dropdown -->
             <ul
-              class="xl:absolute left-0 top-full xl:w-48 bg-gray-900 text-gray-300 xl:hidden group-hover:block xl:border border-gray-700 shadow-lg z-50">
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              class="downdown-menu xl:absolute left-0 top-full xl:w-48 bg-gray-900 text-gray-300 xl:hidden group-hover:block xl:border border-gray-700 shadow-lg z-50">
+              <li class="hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer ">
                   <span class="text-nowrap">Link 1</span>
                 </a>
               </li>
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              <li class=" hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer">
                   <span class="text-nowrap">Link 2</span>
                 </a>
               </li>
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              <li class=" hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer">
                   <span class="text-nowrap">Link 3</span>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="relative group">
+          <li class="relative group has-child">
             <a href="#"
-              class="flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer dropdown-arrow xl:py-4 py-2">
+              class="menu-link flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer xl:py-4 py-2">
               <span class="text-nowrap">NBA DFS</span>
             </a>
             <!-- Dropdown -->
             <ul
-              class="xl:absolute left-0 top-full xl:w-48 bg-gray-900 text-gray-300 xl:hidden group-hover:block xl:border border-gray-700 shadow-lg z-50">
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              class="downdown-menu xl:absolute left-0 top-full xl:w-48 bg-gray-900 text-gray-300 xl:hidden group-hover:block xl:border border-gray-700 shadow-lg z-50">
+              <li class=" hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer ">
                   <span class="text-nowrap">Link 1</span>
                 </a>
               </li>
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              <li class=" hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer">
                   <span class="text-nowrap">Link 2</span>
                 </a>
               </li>
-              <li class="px-4 py-2 hover:bg-gray-800 hover:text-white">
+              <li class=" hover:bg-gray-800 hover:text-white">
                 <a href="#" class="flex items-center gap-1 hover:text-white cursor-pointer">
                   <span class="text-nowrap">Link 3</span>
                 </a>
@@ -130,25 +130,25 @@
           </li>
           <li class="relative group">
             <a href="#"
-              class="flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer dropdown-arrow xl:py-4 py-2">
+              class="menu-link flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer  xl:py-4 py-2">
               <span class="text-nowrap">MLB DFS</span>
             </a>
           </li>
           <li class="relative group">
             <a href="#"
-              class="flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer dropdown-arrow xl:py-4 py-2">
+              class="menu-link flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer  xl:py-4 py-2">
               <span class="text-nowrap">PGA DFS</span>
             </a>
           </li>
           <li class="relative group">
             <a href="#"
-              class="flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer dropdown-arrow xl:py-4 py-2">
+              class="menu-link flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer xl:py-4 py-2">
               <span class="text-nowrap">Premium Pass</span>
             </a>
           </li>
           <li class="relative group">
             <a href="#"
-              class="flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer xl:py-4 py-2">
+              class="menu-link flex items-center justify-between gap-2 hover:text-brand-gold cursor-pointer xl:py-4 py-2">
               <span class="text-nowrap">DubClub Subscription</span>
             </a>
           </li>
@@ -169,8 +169,8 @@
         <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent">
         </div>
       </div>
-      <div id="" class="container mx-auto px-6 lg:px-12 h-full relative z-10 flex items-center justify-center">
-        <div class="text-center px-4 xl:max-w-3xl">
+      <div id="" class="container mx-auto px-6 lg:px-12 h-full relative z-10">
+        <div class="text-center px-4 xl:max-w-3xl mx-auto">
           <div class="hero-slider">
             <div class="hero-slider-item">
               <div
@@ -801,13 +801,19 @@
       const targetId = toggle.dataset.target;
       const sidebar = document.getElementById(targetId);
 
-      // close previously open sidebar
-      if (activeSidebar && activeSidebar !== sidebar) {
+      // If same sidebar clicked again → close it
+      if (activeSidebar === sidebar) {
+        closeAll();
+        return;
+      }
+
+      // Close previous sidebar
+      if (activeSidebar) {
         activeSidebar.classList.add("-translate-x-full");
         activeSidebar.classList.remove("translate-x-0");
       }
 
-      // open current sidebar
+      // Open new sidebar
       sidebar.classList.remove("-translate-x-full");
       sidebar.classList.add("translate-x-0");
 
@@ -816,7 +822,8 @@
     });
   });
 
-  // close on ovdEventListener("click", closeAll);
+  // ✅ Overlay click close
+  overlay.addEventListener("click", closeAll);
 
   function closeAll() {
     if (activeSidebar) {
@@ -832,6 +839,7 @@
     if (e.key === "Escape") closeAll();
   });
 </script>
+
 <script>
   $('.hero-slider').slick({
     slidesToShow: 1,

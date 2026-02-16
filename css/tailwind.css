@@ -1681,11 +1681,11 @@ body {
   transition-delay: 0s, 0s, .3s, .3s
 }
 
-.dropdown-arrow {
+.has-child .menu-link {
   position: relative;
 }
 
-.dropdown-arrow::after {
+.has-child .menu-link::after {
   content: "";
   width: 7px;
   height: 7px;
@@ -1694,9 +1694,6 @@ body {
   border-bottom: 1px solid;
   transform: rotate(-45deg);
   margin-top: -5px;
-  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTExLjk5OTkgMTMuMTcxNEwxNi45NDk3IDguMjIxNjhMMTguMzYzOSA5LjYzNTg5TDExLjk5OTkgMTUuOTk5OUw1LjYzNTk5IDkuNjM1ODlMNy4wNTAyIDguMjIxNjhMMTEuOTk5OSAxMy4xNzE0WiI+PC9wYXRoPjwvc3ZnPg==);
-        background-position: center;
-        background-repeat: no-repeat; */
 }
 
 .slick-dots {
@@ -1718,6 +1715,23 @@ body {
 
 .slick-dots .slick-active button {
   background-color: #f6ad55;
+}
+
+.downdown-menu li a {
+  padding: .5rem 1rem;
+  display: block;
+}
+
+@media (max-width:1280px) {
+  .downdown-menu {
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 1rem;
+  }
+
+  .downdown-menu li a {
+    padding: .25rem 0;
+  }
 }
 
 .hover\:-translate-y-1:hover {
