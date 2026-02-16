@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-brand-gray {
+    background-color: #f5f5f5;
+}
+
+.bg-brand-dark {
+    background-color: #1a1a1a;
+}
+
+.font-display {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+}
+
+.clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #2b6cb0, #f6ad55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.svg-icon {
+    --size: 24px;
+    height: var(--size);
+    width: var(--size);
+    flex: 0 0 var(--size);
+    max-width: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-icon svg {
+    display: block;
+    fill: currentColor;
+    width: 100%;
+    height: 100%;
+}
+
+.svg-icon--sm {
+    --size: 18px;
+}
+
+.svg-icon--xs {
+    --size: 14px;
+}
+
+.svg-icon--2xs {
+    --size: 10px;
+}
+
+.svg-icon--xl {
+    --size: 40px;
+    height: auto;
+}
+
+.svg-icon--large {
+    --size: 50px;
+}
+
+
+.container {
+    max-width: 1280px;
+}
+
+.logo {
+    display: block;
+    max-width: 150px;
+}
+
+.btn-hamburger {
+    position: relative;
+    z-index: 16;
+    width: 24px;
+    height: 24px;
+    z-index: 1
+}
+
+.btn-hamburger::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: currentColor;
+    -webkit-transition: .25s ease-in-out all;
+    transition: .25s ease-in-out all;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    cursor: default
+}
+
+.btn-hamburger span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    width: 16px;
+    background-color: currentColor;
+    -webkit-transition: height 0s linear, -webkit-transform .6s ease-in-out;
+    transition: height 0s linear, -webkit-transform .6s ease-in-out;
+    transition: height 0s linear, transform .6s ease-in-out;
+    transition: height 0s linear, transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+    -webkit-transition-delay: .6s, 0s, 0s;
+    transition-delay: .6s, 0s, 0s;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center
+}
+
+.btn-hamburger span:after {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 2px;
+    width: 14px;
+    background-color: inherit;
+    content: "";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease, -webkit-transform .3s ease;
+    -webkit-transition-delay: .9s, .9s, .6s, .6s;
+    transition-delay: .9s, .9s, .6s, .6s
+}
+
+.btn-hamburger span:before {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 2px;
+    width: 18px;
+    background-color: inherit;
+    content: "";
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, -webkit-transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease;
+    transition: top .3s ease, width .3s ease, transform .3s ease, -webkit-transform .3s ease;
+    -webkit-transition-delay: .9s, .9s, .6s, .6s;
+    transition-delay: .9s, .9s, .6s, .6s
+}
+
+.btn-hamburger.is-active::before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all
+}
+
+.btn-hamburger.is-active span {
+    height: 0;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: width 0s linear, -webkit-transform 0s ease;
+    transition: width 0s linear, -webkit-transform 0s ease;
+    transition: width 0s linear, transform 0s ease;
+    transition: width 0s linear, transform 0s ease, -webkit-transform 0s ease;
+    -webkit-transition-delay: .3s, .6s, .6s;
+    transition-delay: .3s, .6s, .6s
+}
+
+.btn-hamburger.is-active span:after {
+    top: 0;
+    width: 18px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-delay: 0s, 0s, .3s, .3s;
+    transition-delay: 0s, 0s, .3s, .3s
+}
+
+.btn-hamburger.is-active span:before {
+    top: 0;
+    width: 18px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition-delay: 0s, 0s, .3s, .3s;
+    transition-delay: 0s, 0s, .3s, .3s
+}
+
+.dropdown-arrow {
+    position: relative;
+}
+
+.dropdown-arrow::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(-45deg);
+    margin-top: -5px;
+    /* background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTExLjk5OTkgMTMuMTcxNEwxNi45NDk3IDguMjIxNjhMMTguMzYzOSA5LjYzNTg5TDExLjk5OTkgMTUuOTk5OUw1LjYzNTk5IDkuNjM1ODlMNy4wNTAyIDguMjIxNjhMMTEuOTk5OSAxMy4xNzE0WiI+PC9wYXRoPjwvc3ZnPg==);
+        background-position: center;
+        background-repeat: no-repeat; */
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+}
+
+.slick-dots button {
+    font-size: 0;
+    text-indent: -9999px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #f6ad55;
+}
+
+.slick-dots .slick-active button {
+    background-color: #f6ad55;
+}
